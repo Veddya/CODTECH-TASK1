@@ -1,0 +1,38 @@
+# CODTECH-TASK1
+
+package ProjectAutomation.java;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Heroku {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.heroku.com/");
+		driver.findElement(By.linkText("Sign Up")).click();	
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		
+		driver.findElement(By.xpath("//*[@id=\"first_name\"]")).sendKeys("vedant");
+		driver.findElement(By.xpath("//*[@id=\"last_name\"]")).sendKeys("mahajan");
+		driver.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys("mahajanvedant683@gmail.com");
+		driver.findElement(By.xpath("//*[@id=\"company\"]")).sendKeys("Heroku");
+		driver.findElement(By.xpath("//*[@id=\"role\"]")).sendKeys("Agency / Partner Developer");
+		driver.findElement(By.xpath("//*[@id=\"self_declared_country\"]")).sendKeys("India");
+		driver.findElement(By.xpath("//*[@id=\"main_programming_language\"]")).sendKeys("Java");
+		System.out.println("Please complete the CAPTCHA automatically within 10 seconds...");
+
+        
+		driver.findElement(By.xpath("/html/body/div[1]/div/div[2]/div[2]/form/div[9]/input")).click();
+
+	}
+
+}
+
