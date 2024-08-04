@@ -23,3 +23,14 @@ Benefits:
 Automate repetitive testing tasks.
 Ensure the web application functions correctly across different browsers.
 Improve the efficiency of the testing process.
+
+Test Scripts:
+
+Setup and Teardown:
+The @BeforeEach method sets up the WebDriver instance. You can switch between browsers by commenting or uncommenting the appropriate lines. Make sure to set the correct path to the WebDriver binaries.
+The @AfterEach method closes the browser after each test.
+
+Test Methods:
+testSuccessfulLogin: Tests a successful login scenario by providing valid credentials and verifying the URL after the login.
+testFailedLogin: Tests a failed login scenario with invalid credentials and checks for the presence of an error message.
+
